@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap.native/3.0.15/bootstrap-native-v4.min.js"></script>
+    <script src="https://kit.fontawesome.com/b65dda9cc7.js" crossorigin="anonymous"></script>
+    <title>exam-6</title>
+</head>
+<body>
+
+<div class="modal fade" id="userInfoModal" tabindex="-1" aria-labelledby="userInfoModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="userInfoModalLabel">Edit profile</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <form id="userEditModalForm">
+                <div class="modal-body">
+                    <div class="input-group input-group-sm mb-3">
+                        <p class="mr-3">First name</p>
+                        <div class="input-group-prepend">
+                        </div>
+                        <input type="text" id="firstNameInput" class="form-control" required>
+                    </div>
+                    <div class="input-group input-group-sm mb-3">
+                        <p class="mr-3">Last name</p>
+                        <div class="input-group-prepend">
+                        </div>
+                        <input type="text" id="lastNameInput" class="form-control" required>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary">Edit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div id="user-block" style="width: 800px; height: auto; display: block; margin: 60px auto auto auto;">
+    <form id="userFormBlock">
+        <div class="card" style="width: 100%">
+            <div class="card-body">
+                <h5 class="card-title"><span id="mainUserNameTitle"></span> <span id="mainUserLastNameTitle"></span><i
+                        class="fas fa-user-edit ml-4" style="color: #007bff; cursor: pointer" data-toggle="modal"
+                        data-target="#userInfoModal"></i></h5>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" id="inputMessage" placeholder="say something!" required>
+                    <button class="btn btn-primary ml-3">Send</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+<div id="messages-block" style="width: 800px; height: auto; display: block; margin: 30px auto auto auto;">
+    <h5 class="text-center my-5">Messages</h5>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
